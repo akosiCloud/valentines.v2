@@ -1,0 +1,67 @@
+<%- include('partials/header') %>
+
+  <title>Happy Valentines! ❤️</title>
+
+  <body class="bg-gradient-to-br from-pink-200 via-rose-300 to-red-400 min-h-screen flex items-center justify-center">
+
+<div id="bgContainer" class="absolute inset-0">
+    <img 
+      src="/images/val.png" 
+      alt="Valentine background"
+      class="w-full h-full object-cover filter blur-sm brightness-75"
+    >
+    <!-- Vignette Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+  </div>
+
+  <!-- Content -->
+<div class="relative z-10 bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-10 text-center max-w-md">
+
+  <!-- Floating Hearts -->
+  <div class="absolute -top-6 -left-6 text-3xl">💖</div>
+  <div class="absolute -top-6 -right-6 text-3xl">💘</div>
+  <div class="absolute -bottom-6 left-6 text-3xl">💝</div>
+  <div class="absolute -bottom-6 right-6 text-3xl">💕</div>
+
+  <h1 class="text-4xl font-extrabold text-rose-700 mb-4">
+    Hey You ❤️
+  </h1>
+
+  <p class="text-gray-800 text-lg mb-6">
+    May ka date ka man o Wala..
+  </p>
+
+  <p class="text-2xl font-semibold text-pink-600 mb-8">
+    Masaya ka ba ngayong Valentines? 💕
+  </p>
+
+  <!-- Buttons -->
+  <div
+    id="btnContainer"
+    class="relative flex justify-center gap-6 h-32 items-center">
+
+    <!-- Yes Button -->
+    <a id="yesWrapper" href="invitation/next-page">
+      <button
+        id="yesBtn"
+        class="px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-full font-bold shadow-lg transition-all duration-300">
+        Oo 💖
+      </button>
+    </a>
+
+    <!-- No Button -->
+    <button
+      id="noBtn"
+      class="px-6 py-3 bg-gray-300 text-gray-700 rounded-full font-bold
+            transition-all duration-150 ease-out"
+            onclick="openModal({})">
+      Hindi 😒
+    </button>
+    <%- include('modals/modalNo.ejs') %>
+
+  </div>
+</div>
+
+  <!-- JS -->
+<script src="/scripts/indexScript.js"></script>
+  <%- include('partials/footer') %>
